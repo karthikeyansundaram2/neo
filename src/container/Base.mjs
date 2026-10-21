@@ -205,7 +205,7 @@ class Container extends Component {
             super.afterSetMounted(value, oldValue);
 
             for (let i = 0, {items} = this, {length} = items; i < length; i++) {
-                if (!items[i].vdom.removeDom) {
+                if (!items[i].vdom?.removeDom) {
                     items[i].mounted = value
                 }
             }
@@ -245,7 +245,7 @@ class Container extends Component {
                 len     = items.length;
 
             for (; i < len; i++) {
-                if (!items[i].vdom.removeDom) {
+                if (!items[i].vdom?.removeDom) {
                     items[i].isVnodeInitializing = value
                 }
             }
